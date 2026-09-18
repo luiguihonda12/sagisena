@@ -1,0 +1,1042 @@
+/* ============================================================
+   stypro.css - Estilos de las vistas del módulo vota Sena
+   Propuesta (1207) y Formato de propuesta (1218)
+   Verde base del proyecto: #117f09 (mismo del menú / footer)
+   ============================================================ */
+:root {
+    --sp-verde: #117f09;
+    --sp-verde-osc: #0c6206;
+    --sp-verde-claro: #e6f2e2;
+    --sp-borde: #d7dedb;
+    --sp-gris-txt: #4b5563;
+    --sp-bg: #f1f6f4;
+}
+
+/* ============================================================
+   Secciones genéricas de tarjeta (Propuesta)
+   ============================================================ */
+.pro-wrap {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.pro-head,
+.pro-sec {
+    background: #ffffff;
+    border: 1px solid var(--sp-borde);
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(17, 127, 9, 0.07);
+}
+
+/* --- Encabezado del candidato --- */
+.pro-head {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+    padding: 26px 30px;
+    margin-bottom: 28px;
+    border-left: 8px solid var(--sp-verde);
+}
+
+.pro-photo {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    background: #eef4f0;
+    flex-shrink: 0;
+}
+
+.pro-photo--empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sp-gris-txt);
+    border: 2px dashed var(--sp-borde);
+    background: var(--sp-bg);
+}
+
+.pro-photo--empty i {
+    font-size: 2.2rem;
+    color: var(--sp-verde);
+}
+
+.pro-data {
+    flex: 1;
+    min-width: 280px;
+}
+
+.pro-noca {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--sp-verde-osc);
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.pro-nom {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+.pro-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    color: var(--sp-gris-txt);
+    font-size: 1.02rem;
+}
+
+.pro-meta i {
+    color: var(--sp-verde);
+    margin-right: 7px;
+}
+
+/* --- Tarjetas por sección del formulario --- */
+.pro-sec {
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.pro-sec-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: var(--sp-bg);
+    border-bottom: 1px solid var(--sp-borde);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--sp-verde-osc);
+}
+
+.pro-sec-head i {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--sp-verde);
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.pro-sec-body {
+    padding: 22px 24px 14px 24px;
+}
+
+.pro-lbl {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+.pro-subh {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: var(--sp-verde-osc);
+    font-size: 1.12rem;
+    margin: 8px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--sp-verde-claro);
+}
+
+.pro-subh::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--sp-verde);
+    flex-shrink: 0;
+}
+
+/* --- Controles del formulario --- */
+.pro-wrap .form-control,
+.pro-wrap .form-select {
+    border-radius: 10px;
+    border-color: var(--sp-borde);
+    padding: 11px 16px;
+    font-size: 1.05rem;
+}
+
+.pro-wrap .form-control:focus,
+.pro-wrap .form-select:focus {
+    border-color: var(--sp-verde);
+    box-shadow: 0 0 0 0.2rem rgba(17, 127, 9, 0.15);
+}
+
+/* --- Acciones del formulario --- */
+.pro-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.btn-pro {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 34px;
+    border: none;
+    border-radius: 10px;
+    background: var(--sp-verde);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 10px rgba(17, 127, 9, 0.3);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-pro:hover {
+    background: var(--sp-verde-osc);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(17, 127, 9, 0.35);
+}
+
+.pro-empty {
+    background: #ffffff;
+    border: 1px dashed var(--sp-borde);
+    border-radius: 16px;
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--sp-gris-txt);
+    font-size: 1.05rem;
+}
+
+.pro-empty i {
+    font-size: 2.4rem;
+    color: var(--sp-verde);
+    margin-bottom: 12px;
+}
+
+/* ============================================================
+   Formato de propuesta (documento formal, 1218)
+   ============================================================ */
+.fpro-wrap {
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+/* --- Barra de acciones --- */
+.fpro-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.fpro-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 22px;
+    border-radius: 10px;
+    border: 2px solid var(--sp-verde);
+    background: #ffffff;
+    color: var(--sp-verde);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 8px rgba(17, 127, 9, 0.12);
+}
+
+.fpro-btn:hover {
+    background: var(--sp-verde-claro);
+    transform: translateY(-1px);
+}
+
+.fpro-btn--pdf {
+    background: var(--sp-verde);
+    color: #ffffff;
+    border-color: var(--sp-verde);
+}
+
+.fpro-btn--pdf:hover {
+    background: var(--sp-verde-osc);
+    color: #ffffff;
+}
+
+/* --- Hoja del documento --- */
+.fpro-page {
+    background: #ffffff;
+    border: 1px solid var(--sp-borde);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 44px 52px;
+}
+
+.fpro-head {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--sp-verde);
+    margin-bottom: 24px;
+}
+
+.fpro-logo {
+    width: 104px;
+    margin-bottom: 12px;
+}
+
+.fpro-tit {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sp-verde-osc);
+    line-height: 1.2;
+}
+
+.fpro-sub {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+}
+
+.fpro-fecha {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+/* --- Datos del candidato --- */
+.fpro-data {
+    margin-bottom: 26px;
+}
+
+.fpro-data-row {
+    display: flex;
+    border: 1px solid var(--sp-borde);
+    border-bottom: 0;
+    background: #ffffff;
+}
+
+.fpro-data-row:last-child,
+.fpro-data-row--full:last-child {
+    border-bottom: 1px solid var(--sp-borde);
+}
+
+.fpro-data-lbl {
+    width: 220px;
+    flex-shrink: 0;
+    padding: 12px 18px;
+    background: var(--sp-bg);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: var(--sp-verde-osc);
+    border-right: 1px solid var(--sp-borde);
+    display: flex;
+    align-items: center;
+}
+
+.fpro-data-val {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+}
+
+.fpro-data-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--sp-borde);
+    margin-top: -1px;
+}
+
+.fpro-data-cell {
+    background: #ffffff;
+    border-right: 1px solid var(--sp-borde);
+    padding: 14px 16px;
+}
+
+.fpro-data-cell:last-child {
+    border-right: 0;
+}
+
+.fpro-data-cell .fpro-data-lbl {
+    width: auto;
+    border-right: 0;
+    padding: 0;
+    background: transparent;
+    margin-bottom: 6px;
+}
+
+.fpro-data-cell .fpro-data-val {
+    padding: 0;
+    font-weight: 600;
+}
+
+.fpro-row-full {
+    display: block;
+}
+
+/* --- Secciones del documento --- */
+.fpro-sec {
+    margin-bottom: 18px;
+    page-break-inside: avoid;
+}
+
+.fpro-sec-tit {
+    background: var(--sp-verde);
+    color: #ffffff;
+    padding: 11px 18px;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 8px 8px 0 0;
+}
+
+.fpro-sec-body {
+    border: 1px solid var(--sp-borde);
+    border-top: 0;
+    border-radius: 0 0 8px 8px;
+    padding: 18px 20px;
+}
+
+.fpro-val {
+    margin: 0;
+    line-height: 1.65;
+    font-size: 1.1rem;
+    color: #1f2937;
+}
+
+.fpro-campo {
+    margin-bottom: 14px;
+}
+
+.fpro-campo:last-child {
+    margin-bottom: 0;
+}
+
+.fpro-campo-lbl {
+    display: block;
+    font-weight: 700;
+    font-size: 0.86rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--sp-verde);
+    margin-bottom: 4px;
+}
+
+.fpro-campo-val {
+    display: block;
+    border-left: 3px solid var(--sp-verde);
+    padding-left: 12px;
+    font-size: 1.06rem;
+    color: #1f2937;
+}
+
+/* --- Checklist Condiciones / Manifiesto --- */
+.fpro-chk-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.fpro-chk-row:last-child {
+    border-bottom: 0;
+}
+
+.fpro-chk-row .fpro-campo-lbl {
+    margin-bottom: 0;
+}
+
+.fpro-chk-val {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    font-weight: 800;
+    font-size: 0.88rem;
+    border-radius: 999px;
+    padding: 6px 16px;
+}
+
+.fpro-chk-val.is-si {
+    color: var(--sp-verde-osc);
+    background: var(--sp-verde-claro);
+}
+
+.fpro-chk-val.is-no {
+    color: #b91c1c;
+    background: #fdecec;
+}
+
+.fpro-chk-val.is-pend {
+    color: #6b7280;
+    background: #f1f5f4;
+}
+
+/* --- Firmas (candidato a la izquierda, responsable a la derecha) --- */
+.fpro-firmas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+    margin-top: 46px;
+}
+
+.fpro-firma {
+    flex: 0 1 40%;
+    border-top: 2px solid #1f2937;
+    padding-top: 12px;
+}
+
+.fpro-firma--cand {
+    text-align: left;
+}
+
+.fpro-firma--resp {
+    text-align: right;
+}
+
+.fpro-firma-txt {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #374151;
+}
+
+/* ============================================================
+   Responsivo
+   ============================================================ */
+@media (max-width: 768px) {
+    .pro-head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pro-noca {
+        font-size: 1.9rem;
+    }
+
+    .pro-meta {
+        justify-content: center;
+    }
+
+    .fpro-page {
+        padding: 22px 18px;
+    }
+
+    .fpro-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fpro-data-cell {
+        border-right: 0;
+        border-bottom: 1px solid var(--sp-borde);
+    }
+
+    .fpro-data-cell:last-child {
+        border-bottom: 0;
+    }
+
+    .fpro-firmas {
+        gap: 24px;
+    }
+
+    .fpro-firma {
+        flex-basis: 48%;
+    }
+
+    .fpro-toolbar {
+        justify-content: center;
+    }
+}
+
+/* ============================================================
+   Impresión
+   ============================================================ */
+@media print {
+    /* Sin encabezado/pie de página del navegador (URL y título) */
+    @page {
+        margin: 0;
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .header-home,
+    .main-menu,
+    .menu--btn-spt-men,
+    .footer-sena,
+    .btnayu,
+    #err,
+    .tit,
+    .fpro-toolbar,
+    .pro-actions {
+        display: none !important;
+    }
+
+    .contenido,
+    .contenido2 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .fpro-wrap,
+    .fpro-page {
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+    }
+
+    .fpro-page {
+        padding: 28px 24px;
+        border-radius: 0;
+    }
+
+    .pro-wrap {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .pro-head,
+    .pro-sec {
+        box-shadow: none;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .fpro-sec,
+    .fpro-data-row,
+    .fpro-data-grid,
+    .fpro-firmas {
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================================
+   Visualizar propuesta (grilla de candidatos, 1204)
+   ============================================================ */
+.cand-wrap {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.cand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.cand-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid var(--sp-borde);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(17, 127, 9, 0.07);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cand-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(17, 127, 9, 0.18);
+    border-color: var(--sp-verde);
+}
+
+.cand-photo {
+    position: relative;
+    height: 230px;
+    background: var(--sp-bg);
+}
+
+.cand-photo img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.cand-photo--empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    height: 100%;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sp-gris-txt);
+    border: 2px dashed var(--sp-borde);
+    background: var(--sp-bg);
+}
+
+.cand-photo--empty i {
+    font-size: 2.4rem;
+    color: var(--sp-verde);
+}
+
+.cand-num {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--sp-verde);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    padding: 4px 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.cand-body {
+    padding: 16px 18px 12px 18px;
+    flex: 1;
+}
+
+.cand-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.cand-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: var(--sp-gris-txt);
+}
+
+.cand-meta span {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.cand-meta i {
+    color: var(--sp-verde);
+    width: 16px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.cand-foot {
+    padding: 0 18px 16px 18px;
+}
+
+.cand-ver {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--sp-verde);
+    color: var(--sp-verde);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.cand-card:hover .cand-ver {
+    background: var(--sp-verde);
+    color: #ffffff;
+}
+
+/* --- Modal de la propuesta --- */
+.cand-modal {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.cand-mh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border: none;
+    padding: 18px 22px;
+    background: linear-gradient(135deg, var(--sp-verde), var(--sp-verde-osc));
+    color: #ffffff;
+}
+
+.cand-mh .btn-close {
+    filter: invert(1);
+}
+
+.cand-hd {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+.cand-hd-photo {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cand-hd-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cand-hd-photo .cand-photo--empty {
+    border: none;
+    background: transparent;
+    font-size: 0.6rem;
+}
+
+.cand-hd-photo .cand-photo--empty i {
+    font-size: 1.5rem;
+}
+
+.cand-hd-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.cand-hd-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    font-size: 0.88rem;
+    opacity: 0.95;
+}
+
+.cand-hd-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cand-hd-meta i {
+    margin-right: 2px;
+}
+
+.cand-hd-num {
+    font-weight: 700;
+}
+
+.cand-mb {
+    padding: 20px 24px;
+    background: #f6faf6;
+}
+
+/* Diálogo adaptable: más ancho cuando el candidato tiene video */
+.modal-dialog.cand-dlg {
+    max-width: min(900px, 96vw);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-dialog.cand-dlg--wide {
+    max-width: min(1100px, 97vw);
+}
+
+.cand-mb .fpro-sec {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.cand-mb .fpro-sec-tit {
+    border-radius: 10px 10px 0 0;
+}
+
+.cand-mb .fpro-campo-val em,
+.cand-mb .fpro-val em {
+    color: #9ca3af;
+}
+
+.cand-mf {
+    border: none;
+    background: #ffffff;
+    padding: 12px 20px;
+}
+
+.cand-mf .btn-pro {
+    padding: 9px 22px;
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+   Video de la propuesta (1207, 1204, 1218)
+   ============================================================ */
+.pro-vid-help {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0 0 16px 0;
+    padding: 12px 16px;
+    background: var(--sp-bg);
+    border: 1px dashed var(--sp-borde);
+    border-radius: 10px;
+    color: var(--sp-gris-txt);
+    font-size: 0.98rem;
+}
+
+.pro-vid-help i {
+    color: var(--sp-verde);
+    margin-top: 2px;
+}
+
+.pro-vid-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-pro--vid {
+    background: var(--sp-verde);
+}
+
+.btn-pro--ver {
+    background: var(--sp-verde-osc);
+}
+
+.btn-pro--vid,
+.btn-pro--ver {
+    padding: 11px 26px;
+}
+
+.pro-vid-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--sp-gris-txt);
+    word-break: break-all;
+}
+
+.pro-vid-name i {
+    color: var(--sp-verde);
+}
+
+/* Nombre real del archivo de video */
+.pro-vid-fname {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px 0;
+    padding: 5px 12px;
+    background: var(--sp-bg);
+    border: 1px solid var(--sp-borde);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sp-gris-txt);
+    word-break: break-all;
+    max-width: 100%;
+}
+
+.pro-vid-fname i {
+    color: var(--sp-verde);
+}
+
+/* Marco contenedor: garantiza que el video nunca se salga del card-list */
+.pro-vid-frame {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Reproductor adaptable a cualquier orientación/tamaño */
+.pro-vid-player {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 78vh;
+    object-fit: contain;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Ver video */
+.pro-vid-modal {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.pro-vid-body {
+    padding: 22px 24px;
+    background: #f6faf6;
+    display: flex;
+    justify-content: center;
+}
+
+.fpro-video {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed #e5e7eb;
+}
+
+.fpro-video .fpro-campo-lbl {
+    margin-bottom: 8px;
+}
+
+/* Ocultar el video al generar el PDF / imprimir */
+@media print {
+    .fpro-video {
+        display: none !important;
+    }
+}
